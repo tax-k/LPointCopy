@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,82 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="LPointCopy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3h-VJ-AXT">
+                                <rect key="frame" x="0.0" y="60" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7Yu-Ad-ZWY"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tZJ-Bm-nyX">
+                                <rect key="frame" x="10" y="420" width="39" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tZJ-Bm-nyX" firstAttribute="leading" secondItem="F3h-VJ-AXT" secondAttribute="leading" constant="10" id="6dA-fR-i0v"/>
+                            <constraint firstItem="F3h-VJ-AXT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EKW-xT-9y9"/>
+                            <constraint firstItem="F3h-VJ-AXT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="XCN-YL-5XO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F3h-VJ-AXT" secondAttribute="trailing" id="XSx-pB-WAw"/>
+                            <constraint firstItem="tZJ-Bm-nyX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="400" id="rtP-sc-nwP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="hrScrollView" destination="F3h-VJ-AXT" id="4Xm-r6-4J6"/>
+                        <outlet property="pageControl" destination="tZJ-Bm-nyX" id="xFK-KQ-K4s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="572" y="34"/>
+        </scene>
+        <!--Pop View Controller-->
+        <scene sceneID="vS9-0V-Sbr">
+            <objects>
+                <viewController storyboardIdentifier="PopViewController" id="MmN-E0-GmG" customClass="PopViewController" customModule="LPointCopy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t0l-So-6YG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0n-6t-9uG">
+                                <rect key="frame" x="168" y="20" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closePopViewAction:" destination="MmN-E0-GmG" eventType="touchUpInside" id="qh4-Cl-3aP"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szf-8E-rY3">
+                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="cuI-1m-LX3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b0n-6t-9uG" firstAttribute="top" secondItem="bzJ-6T-rnW" secondAttribute="top" id="7EI-pd-as7"/>
+                            <constraint firstItem="bzJ-6T-rnW" firstAttribute="trailing" secondItem="Szf-8E-rY3" secondAttribute="trailing" id="7I7-7b-Zz1"/>
+                            <constraint firstItem="bzJ-6T-rnW" firstAttribute="bottom" secondItem="Szf-8E-rY3" secondAttribute="bottom" id="fuF-60-eSt"/>
+                            <constraint firstItem="b0n-6t-9uG" firstAttribute="centerX" secondItem="bzJ-6T-rnW" secondAttribute="centerX" id="g3a-Bu-KBS"/>
+                            <constraint firstItem="Szf-8E-rY3" firstAttribute="leading" secondItem="bzJ-6T-rnW" secondAttribute="leading" id="ie8-iT-JvP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bzJ-6T-rnW"/>
+                    </view>
+                    <connections>
+                        <outlet property="popupBottomConst" destination="fuF-60-eSt" id="TAM-R4-dVh"/>
+                        <outlet property="popupView" destination="Szf-8E-rY3" id="G97-3R-sOR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FQ-vf-g9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="34"/>
         </scene>
     </scenes>
 </document>

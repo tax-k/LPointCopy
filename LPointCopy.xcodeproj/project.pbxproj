@@ -12,6 +12,7 @@
 		60EF7439217AFBD000CF67ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EF7437217AFBD000CF67ED /* Main.storyboard */; };
 		60EF743B217AFBD000CF67ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EF743A217AFBD000CF67ED /* Assets.xcassets */; };
 		60EF743E217AFBD100CF67ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EF743C217AFBD100CF67ED /* LaunchScreen.storyboard */; };
+		60EF7446217B082200CF67ED /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EF7445217B082200CF67ED /* PopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		60EF743A217AFBD000CF67ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60EF743D217AFBD100CF67ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60EF743F217AFBD100CF67ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60EF7445217B082200CF67ED /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				60EF7433217AFBD000CF67ED /* AppDelegate.swift */,
 				60EF7435217AFBD000CF67ED /* ViewController.swift */,
+				60EF7445217B082200CF67ED /* PopViewController.swift */,
 				60EF7437217AFBD000CF67ED /* Main.storyboard */,
 				60EF743A217AFBD000CF67ED /* Assets.xcassets */,
 				60EF743C217AFBD100CF67ED /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				60EF7436217AFBD000CF67ED /* ViewController.swift in Sources */,
 				60EF7434217AFBD000CF67ED /* AppDelegate.swift in Sources */,
+				60EF7446217B082200CF67ED /* PopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
